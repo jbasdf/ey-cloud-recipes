@@ -1,4 +1,5 @@
 require_recipe "delayed_job"
+require_recipe "sunspot"
 
 #execute "testing" do
 #  command %Q{
