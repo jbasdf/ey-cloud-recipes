@@ -1,3 +1,5 @@
+require_recipe "delayed_job"
+
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
@@ -32,7 +34,7 @@
 # require_recipe "mongodb"
 
 #uncomment to run the sunspot recipe
-# require_recipe "sunspot"
+#require_recipe "sunspot"
 
 #uncomment to run the exim recipe
 #exim_auth "auth" do
