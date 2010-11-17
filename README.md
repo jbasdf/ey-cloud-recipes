@@ -2,6 +2,8 @@ ey-cloud-recipes
 ===============
 This is a repository of some basic recipes for EY-Cloud using chef to deploy, setup, and configure common tools for Rails applications.
 
+For an in depth explanation:
+http://docs.engineyard.com/appcloud/howtos/customizations/custom-chef-recipes?s[]=chef#invoking-custom-chef-recipes
 
 Installation
 ============
