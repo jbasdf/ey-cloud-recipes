@@ -1,8 +1,6 @@
 # Delayed Job
 
-This cookbook can serve as a good starting point for setting up Delayed Job support in your application. 
-In this recipe your Delayed Job workers will be set up to run under monit. The number of workers will
-vary based on the size of the instance running Delayed Job.
+This cookbook has been modified from the original delayed_job cookbook.
 
 ** Please Note ** This recipe will setup delayed_job on a single instance environment or on a Utility instance in a cluster environment. If you need delayed_job to run on app instances (if you are not using a Utility instance), you will need to modify the recipe.
 
@@ -10,7 +8,7 @@ vary based on the size of the instance running Delayed Job.
 
 To install this, you will need to add the following to cookbooks/main/recipes/default.rb:
 
-    require_recipe "delayed_job"
+    require_recipe "delayed_job_too"
     
 Make sure this and any customizations to the recipe are committed to your own fork of this 
 repository.
