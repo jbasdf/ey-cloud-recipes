@@ -22,12 +22,13 @@ if node[:instance_role] == "solo" || (node[:instance_role] == "util" && node[:na
     worker_count.times do |count|
       template "/etc/monit.d/delayed_job#{count+1}.#{app_name}.monitrc" do
         source "dj.monitrc.erb"
-        owner "root"
-        group "root"
+        owner node[:owner_name]
+        group node[:owner_name]
         mode 0644
         variables({
           :app_name => app_name,
           :user => node[:owner_name],
+          :group => node[:owner_name],
           :worker_name => "#{app_name}_delayed_job#{count+1}",
           :framework_env => node[:environment][:framework_env]
         })
