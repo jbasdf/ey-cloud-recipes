@@ -1,4 +1,4 @@
-require_recipe "delayed_job_too"
+#require_recipe "delayed_job_too"
 require_recipe "sunspot"
 
 #execute "testing" do
