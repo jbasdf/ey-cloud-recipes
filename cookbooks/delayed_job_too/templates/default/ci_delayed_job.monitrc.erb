@@ -1,0 +1,6 @@
+check process delayed_job_<%= @worker_number %>
+  with pidfile /data/<%= @app_name %>/shared/pids/delayed_job.<%= @worker_number %>.pid
+  start program = "/usr/bin/env RAILS_ENV=<%= @framework_env %> /data/<%= @app_name %>/current/script/delayed_job start -i <%= @worker_number %>" with timeout 60 seconds
+  stop program = "/usr/bin/env RAILS_ENV=<%= @framework_env %> /data/<%= @app_name %>/current/script/delayed_job stop -i <%= @worker_number %>" with timeout 60 seconds
+  if totalmem is greater than 300 MB then restart
+  group ci_delayed_job_<%= @app_name %>
